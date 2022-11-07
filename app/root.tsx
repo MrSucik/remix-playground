@@ -20,6 +20,14 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <style>
+          {`form,div {
+              display: grid;
+              gap: 0.5rem;
+              max-width: 30rem;
+              margin: 2rem auto;
+          }`}
+        </style>
       </head>
       <body>
         <Outlet />
