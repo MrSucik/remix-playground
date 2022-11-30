@@ -13,33 +13,8 @@ export const googlePlayUrl =
   "https://play.google.com/store/apps/details?id=xyz.enter.app";
 
 const red = () => {
-  windowLocation(
-    "https://apps.apple.com/app/enter-nft-token-gating/id1623372424"
-  );
+  window.open("https://apps.apple.com/app/enter-nft-token-gating/id1623372424");
 };
-
-function windowLocation(url: string) {
-  var X = setTimeout(function () {
-    window.location.replace(url);
-    return true;
-  }, 300);
-  //   @ts-ignore
-  if ((window.location = url)) {
-    clearTimeout(X);
-    return true;
-  } else {
-    //   @ts-ignore
-    if ((window.location.href = url)) {
-      clearTimeout(X);
-      return true;
-    } else {
-      clearTimeout(X);
-      //   @ts-ignore
-      window.location.replace(url);
-      return true;
-    }
-  }
-}
 
 export default function Index() {
   if (typeof window !== "undefined") {
@@ -50,7 +25,10 @@ export default function Index() {
 
   return (
     <>
-      redirect
+      redirect to{" "}
+      <a href="https://apps.apple.com/app/enter-nft-token-gating/id1623372424">
+        redirect
+      </a>
       <div onClick={() => red()}>asd</div>
     </>
   );
