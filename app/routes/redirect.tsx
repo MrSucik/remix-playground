@@ -16,10 +16,12 @@ export const appStoreUrl =
 
 export default function Index() {
   if (typeof window !== "undefined") {
-    const isAppleDevice = isIOS();
-    console.log(isAppleDevice);
+    setTimeout(() => {
+      const isAppleDevice = isIOS();
+      console.log(isAppleDevice);
 
-    window.open(isAppleDevice ? appStoreUrl : googlePlayUrl);
+      window.location.assign(isAppleDevice ? appStoreUrl : googlePlayUrl);
+    }, 1000);
   }
 
   return <></>;
