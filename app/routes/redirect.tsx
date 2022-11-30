@@ -18,11 +18,9 @@ export default function Index() {
   if (typeof window !== "undefined") {
     setTimeout(() => {
       const isAppleDevice = isIOS();
-      console.log(isAppleDevice);
-
-      window.location.href = isAppleDevice ? appStoreUrl : googlePlayUrl;
-    }, 1000);
+      location.href = isAppleDevice ? appStoreUrl : googlePlayUrl;
+    }, 3000);
   }
 
-  return <></>;
+  return <>redirect</>;
 }
