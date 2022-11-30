@@ -1,6 +1,14 @@
 import { createRequestHandler } from "@remix-run/netlify";
 import * as build from "@remix-run/dev/server-build";
 
+import * as Sentry from "@sentry/remix";
+
+Sentry.init({
+  dsn: "https://2206fc3cb2e24e7fa9fdb9885771529d:0d0148b0e94240bb9936a9de8bafce74@o4504246142500864.ingest.sentry.io/4504246144073728",
+  tracesSampleRate: 1,
+  integrations: [],
+});
+
 /*
  * Returns a context object with at most 3 keys:
  *  - `netlifyGraphToken`: raw authentication token to use with Netlify Graph

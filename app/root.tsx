@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { withSentry } from "@sentry/remix";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -14,7 +15,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-export default function App() {
+function App() {
   return (
     <html lang="en">
       <head>
@@ -22,10 +23,10 @@ export default function App() {
         <Links />
         <style>
           {`form,div {
-              display: grid;
-              gap: 0.5rem;
-              max-width: 30rem;
-              margin: 2rem auto;
+            display: grid;
+            gap: 0.5rem;
+            max-width: 30rem;
+            margin: 2rem auto;
           }`}
         </style>
       </head>
@@ -38,3 +39,5 @@ export default function App() {
     </html>
   );
 }
+
+export default withSentry(App);
