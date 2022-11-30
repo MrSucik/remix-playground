@@ -5,6 +5,7 @@ const red = () => {
   location.replace(appLink);
   window.open(appLink);
 };
+ 
 
 export default function Index() {
   if (typeof window !== "undefined") {
