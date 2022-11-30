@@ -26,7 +26,11 @@ export default function Index() {
   return (
     <>
       redirect to{" "}
-      <a href="https://apps.apple.com/app/enter-nft-token-gating/id1623372424">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://apps.apple.com/app/enter-nft-token-gating/id1623372424"
+      >
         redirect
       </a>
       <div onClick={() => red()}>asd</div>
