@@ -14,13 +14,22 @@ export const googlePlayUrl =
 export const appStoreUrl =
   "https://apps.apple.com/app/enter-nft-token-gating/id1623372424";
 
+const red = () => {
+  const isAppleDevice = isIOS();
+  location.href = isAppleDevice ? appStoreUrl : googlePlayUrl;
+};
+
 export default function Index() {
   if (typeof window !== "undefined") {
     setTimeout(() => {
-      const isAppleDevice = isIOS();
-      location.href = isAppleDevice ? appStoreUrl : googlePlayUrl;
+      red();
     }, 3000);
   }
 
-  return <>redirect</>;
+  return (
+    <>
+      redirect
+      <div onClick={() => red()}>asd</div>
+    </>
+  );
 }
