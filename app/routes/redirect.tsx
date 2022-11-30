@@ -19,7 +19,7 @@ export default function Index() {
     const isAppleDevice = isIOS();
     console.log(isAppleDevice);
 
-    window.location.assign(isAppleDevice ? appStoreUrl : googlePlayUrl);
+    window.open(isAppleDevice ? appStoreUrl : googlePlayUrl);
   }
 
   return <></>;
