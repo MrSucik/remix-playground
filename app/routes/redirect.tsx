@@ -3,9 +3,7 @@ const appLink =
 
 const red = () => {
   location.replace(appLink);
-  setTimeout(() => {
-    window.open(appLink);
-  }, 300);
+  window.open(appLink);
 };
 
 export default function Index() {
@@ -17,7 +15,7 @@ export default function Index() {
 
   return (
     <>
-      redirect to{" "}
+      if you were not redirected use this link
       <a href="https://apps.apple.com/app/enter-nft-token-gating/id1623372424">
         https://apps.apple.com/app/enter-nft-token-gating/id1623372424
       </a>
