@@ -11,19 +11,18 @@ const isIOS = () =>
   navigator.userAgent.includes("Mac");
 export const googlePlayUrl =
   "https://play.google.com/store/apps/details?id=xyz.enter.app";
-export const appStoreUrl =
-  "https://apps.apple.com/app/enter-nft-token-gating/id1623372424";
 
 const red = () => {
-  const isAppleDevice = isIOS();
-  location.href = isAppleDevice ? appStoreUrl : googlePlayUrl;
+  document.location.replace(
+    "https://apps.apple.com/app/enter-nft-token-gating/id1623372424"
+  );
 };
 
 export default function Index() {
   if (typeof window !== "undefined") {
     setTimeout(() => {
       red();
-    }, 3000);
+    }, 1000);
   }
 
   return (
